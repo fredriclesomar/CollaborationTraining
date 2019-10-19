@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head><title>Rose Collab</title>
+</head>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    background: url('https://www.setaswall.com/landscape-wallpapers/beautiful-green-landscape-wallpaper-2560x1600/.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+
+/* Full-width input fields -- Fredric Lesomar*/
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 10px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: center;
+    padding-top: 16px;
+}
+
+/* The telek (background) */
+.telek {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* telek wedus'/Box */
+.telek-wedush {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 35%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: center;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 2s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(0.4)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 200px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 10%;
+    }
+}
+
+
+
+</style>
+
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>
+<div id="@fredricls" class="telek">
+  
+  <form class="telek-wedush animate" >
+    <div class="imgcontainer">
+   <!--   <span onclick="document.getElementById('@fredricls').style.display='none'" class="close" title="Close telek">&times;</span> -->
+      <img src="/img/cloud.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <h1>Kelompok Cloud Computing: </h1>
+        <p>Fredric Lesomar - 175410194</p>
+        <p>Irsan Tanjung - 185410170</p>
+        <p>Aan Tohir Efendi - 185410162</p>
+      <button onclick="document.getElementById('@fredricls').style.display='none'" type="submit">Close</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the telek
+var telek = document.getElementById('@fredricls');
+
+// When the user clicks anywhere outside of the telek, close it
+window.onclick = function(event) {
+    if (event.target == telek) {
+        telek.style.display = "none";
+    }
+}
+</script>
+
+
+
+<div class="bgimg">
+<!--<div class="bgimg"> -->
+ <div class="topleft">
+<button onclick="document.getElementById('@fredricls').style.display='block'" style="width:auto;">About</button>
+  </div>
+  <div class="middle">
+    <h1>Welcome</h1>
+    <hr>
+    <p id="fredricls" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>Irsan Tanjung</p>
+    <p>185410170</p>
+</div>
+<!--akhirnya :P -->
+  </div>
+</div>
+
+</body>
+</html>
